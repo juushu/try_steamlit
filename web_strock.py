@@ -5,6 +5,8 @@ import os
 
 st.title("株ニュース要約Webアプリ")
 
+# OpenAI APIキーは環境変数で管理推奨
+api_key = st.secrets["OPENAI_API_KEY"] if "OPENAI_API_KEY" in st.secrets else st.text_input("OpenAI APIキーを入力してください", type="password")
 
 keyword = st.text_input("調べたい銘柄名を入力", "トヨタ自動車")
 
